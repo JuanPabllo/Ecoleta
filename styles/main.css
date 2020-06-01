@@ -1,5 +1,11 @@
 :root{
     --title-color: #322153;
+    --primary-color:#34cd79;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 html { 
@@ -8,6 +14,7 @@ html {
 
     body{
         background: #f0f0f0f5;
+        -webkit-font-smoothing: antialiased;
     }
 a {
     text-decoration: none;
@@ -21,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #page-home {
     height: 100vw;
-    background: url('../Image/icones/home-background.svg');
+    background: url('../Image/icones/home-background.svg')no-repeat;
     background-position: 35vw bottom;
 }
 
@@ -29,7 +36,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
-    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #page-home header {
@@ -55,8 +64,59 @@ h1, h2, h3, h4, h5, h6 {
 
 #page-home main {
     max-width: 560px;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #page-home main h1 {
     font-size: 54px;
+}
+
+#page-home main p {
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+#page-home main a {
+    width: 100%;
+    max-width: 360px;
+    height: 72px;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+
+    margin-top: 40px;
+    background-color: var(--primary-color);
+
+    transition: 400ms;
+
+    font-weight: bold;
+    color: white;
+}
+#page-home main a:hover{
+    background-color: #2fb86e;
+}
+
+#page-home main a span{
+    width: 72px;
+    height: 72px;
+    background-color: rgba(0, 0, 0, 0.08);
+
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page-home main a span::after {
+    content: '';
+    background-image: url('../Image/icones/search.svg');
+    width: 20px;
+    height: 20px;
 }
