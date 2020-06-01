@@ -21,19 +21,14 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--title-color);
   font-family: 'Ubuntu', sans-serif;
 }
 
 #page-home {
   height: 100vh;
-  background: url('../assets/home-background.svg') no-repeat;
+  background: url('../img/home-background.svg') no-repeat;
   background-position: 35vw bottom;
 }
 
@@ -66,7 +61,7 @@ h6 {
 #page-home header a span {
   margin-right: 16px;
   display: flex;
-  background: url('../assets/log-in.svg');
+  background: url('../img/log-in.svg');
 
   width: 20px;
   height: 20px;
@@ -128,7 +123,7 @@ h6 {
 
 #page-home main a span::after {
     content: "";
-    background-image: url('../assets/search.svg');
+    background-image: url('../img/search.svg');
 
     width: 20px;
     height: 20px;
