@@ -10,7 +10,7 @@ server.use(express.static("public"))
 const nunjucks = require("nunjucks")
 nunjucks.configure("src/views", {
     express: server,
-    noCache:  true
+    noCache: true
 })
 
 
@@ -19,7 +19,9 @@ nunjucks.configure("src/views", {
 // req: requisição
 // res: Resposta
 server.get("/", (req, res) => {
-    return res.render("index.html", { title: "Um titulo" })
+    return res.render("index.html", {
+        title: "Um titulo"
+    })
 })
 
 server.get("/create-point", (req, res) => {
