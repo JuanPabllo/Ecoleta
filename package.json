@@ -4,7 +4,7 @@
   "description": "<h2> Aplicação web para coleta eficiente de resíduos </h2>",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
