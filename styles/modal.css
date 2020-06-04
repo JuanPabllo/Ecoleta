@@ -18,18 +18,18 @@
     display: none;
 }
 
-#modal .content{
+#modal .content {
     color: white;
 
     width: 420px;
 }
 
 #modal .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        margin-bottom: 48px;
+    margin-bottom: 48px;
 }
 
 #modal .header a {
@@ -50,7 +50,7 @@
     line-height: 42px;
 }
 
-#modal form label{
+#modal form label {
     font-size: 14px;
     line-height: 16px;
 
@@ -58,11 +58,11 @@
     margin-bottom: 8px;
 }
 
-#modal form .field{
+#modal form .field {
     display: flex;
 }
 
-#modal form input{
+#modal form input {
     flex: 1;
 
     background-color: #f0f0f5;
@@ -86,6 +86,6 @@
     border-radius: 0 8px 8px 0;
 }
 
-#modal form button:hover{
+#modal form button:hover {
     background-color: #2fb86e;
 }

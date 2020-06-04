@@ -33,7 +33,7 @@ function getCities(event) {
     fetch(url)
         .then(res => res.json())
         .then(cities => {
-            
+
 
             for (const city of cities) {
                 citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
@@ -57,13 +57,13 @@ document
 // todos os li
 const itemsToCollect = document.querySelectorAll(".items-grid li")
 
-for(const item of itemsToCollect) {
+for (const item of itemsToCollect) {
     item.addEventListener("click", handleSelectedItem)
 }
 
 const collectedItems = document.querySelector("input[name=items]")
 
-let  selectedItems = []
+let selectedItems = []
 
 
 function handleSelectedItem(event) {
@@ -75,16 +75,16 @@ function handleSelectedItem(event) {
     const itemId = itemLi.dataset.id
 
 
-    
+
     // Verificar se exitem itens selecionados, se SIM
     //Pegar os itens selecionados
 
-    const alreadySelected = selectedItems.findIndex( item => {
+    const alreadySelected = selectedItems.findIndex(item => {
         const itemFound = item == itemId // isso sera true ou false
         return itemFound
     })
 
-        //Se ja estiver selecionado
+    //Se ja estiver selecionado
     if (alreadySelected >= 0) {
         // tirar da seleção
         const filteredItems = selectedItems.filter(item => {
@@ -93,13 +93,13 @@ function handleSelectedItem(event) {
         })
 
         selectedItems = filteredItems
-    }else(
+    } else(
         //se nao estiver selecionado
         //add a seleção
         selectedItems.push(itemId)
     )
 
     //Atualizar o campo escondido
-        collectedItems.value = selectedItems
-    
-} 
+    collectedItems.value = selectedItems
+
+}

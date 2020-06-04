@@ -122,7 +122,7 @@ form button:hover {
     background-color: #2fb86e;
 }
 
-.items-grid{
+.items-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
@@ -149,7 +149,7 @@ form button:hover {
     cursor: pointer;
 }
 
-.items-grid li span{
+.items-grid li span {
     margin-top: 12px;
 
     flex: 1;
@@ -160,7 +160,7 @@ form button:hover {
     color: var(--title-color);
 }
 
-.items-grid li.selected{
+.items-grid li.selected {
     background: #e1faec;
     border: 2px solid #34cb79;
 
