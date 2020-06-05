@@ -1,7 +1,7 @@
 <h3 align="center">
     <img alt="Logo" title="logo" width="300px" src="public/assets/logo.svg">
     <br><br>
-    <b>Ajude o meio ambiente, Somos parte dele ♻️</b> 
+    <b>Ajude o meio ambiente, fazemos parte dele ♻️</b> 
 </h3>
 
 ## :bookmark: Sobre o desenvolverdor
