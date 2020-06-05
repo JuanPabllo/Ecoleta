@@ -4,6 +4,10 @@
     <b>Ajude o meio ambiente, Somos parte dele ♻️</b> 
 </h3>
 
+## :bookmark: Sobre o desenvolverdor
+<h4 align="center">
+    Feito por <a href="https://www.linkedin.com/in/juanpablodev/" target="_blank">Juan Pablo</a>
+</h4>
 
 ## :bookmark: Sobre
 
@@ -25,7 +29,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ## :mortar_board: Quem ministrou?
 
-As aulas foram ministradas pelo **(<a href="https://github.com/maykbrito">Maiky Brito</a>)**
+As aulas foram ministradas pelo **<a href="https://github.com/maykbrito">Maiky Brito</a>**
 
 ## :memo: License
 
