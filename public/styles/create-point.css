@@ -1,7 +1,8 @@
 #page-create-point {
     width: 90%;
     max-width: 1100px;
-    /*Alinhamento de caixa pelo lado de fora */
+
+    /*alinhamento de caixa pelo lado de fora*/
     margin: 0 auto;
 }
 
@@ -16,18 +17,21 @@
 #page-create-point header a {
     color: var(--title-color);
     font-weight: bold;
+
     display: flex;
     align-items: center;
 }
 
 #page-create-point header a span {
     margin-right: 16px;
-    background-image: url('../img/arrow-left.svg');
+
+    background-image: url('../assets/arrow-left.svg');
 
     display: flex;
 
     width: 20px;
     height: 24px;
+
 }
 
 form {
@@ -35,12 +39,10 @@ form {
 
     margin: 80px auto;
     padding: 64px;
-
     border-radius: 8px;
 
-    max-width: 730px;
+    max-width: 730px;   
 }
-
 
 form h1 {
     font-size: 36px;
@@ -53,11 +55,13 @@ form fieldset {
 
 form legend {
     margin-bottom: 40px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     width: 100%;
+
 }
 
 form legend h2 {
@@ -65,10 +69,10 @@ form legend h2 {
 }
 
 form legend span {
-    font-size: 16px;
-    color: var(--primary-color);
-}
+    font-size: 14px;
+    color: var(--title-color);
 
+}
 
 form .field {
     flex: 1;
@@ -79,20 +83,26 @@ form .field {
 }
 
 form .field-group {
-    display: flex;
+    display: flex;  
 }
 
-form input,
-form select {
-    background-color: #f0f0f5;
+form input, form select {
+    background-color: var(--background-color);
 
     border: 0;
     padding: 16px 24px;
-    font-size: 16px;
-
     border-radius: 8px;
 
-    /* outline: none; */
+    font-size: 16px;
+
+    /*tira a seleção preta ao redor*/
+    outline: none;
+
+    transition: 400ms;
+}
+
+form input:hover, form select:hover {
+    background-color: #c8c8d8;
 }
 
 form select {
@@ -103,10 +113,11 @@ form select {
 
 form label {
     font-size: 14px;
+
     margin-bottom: 8px;
 }
 
-form .field-group .field+.field {
+form .field-group .field + .field {
     margin-left: 24px;
 }
 
@@ -115,17 +126,16 @@ form button {
     height: 56px;
 
     background-color: var(--primary-color);
-    border-radius: 8px;
 
     color: white;
     font-weight: bold;
     font-size: 16px;
 
     border: 0;
-
+    border-radius: 8px;
     margin-top: 40px;
 
-    transition: background-color 400ms;
+    transition: 400ms; 
 }
 
 form button:hover {
@@ -139,21 +149,20 @@ form button:hover {
 }
 
 .items-grid li {
-    background-color: #f5f5f5;
+    background-color: var(--background-color);
+
     list-style: none;
 
-    border: 2px solid #f5f5f5;
+    border: 2px solid var(--background-color);
     border-radius: 8px;
-
-    height: 180px;
-
     padding: 32px 24px 16px;
 
+    height: 180px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
     text-align: center;
 
     cursor: pointer;
@@ -163,7 +172,6 @@ form button:hover {
     margin-top: 12px;
 
     flex: 1;
-
     display: flex;
     align-items: center;
 
@@ -171,9 +179,9 @@ form button:hover {
 }
 
 .items-grid li.selected {
-    background: #e1faec;
-    border: 2px solid #34cb79;
+    background: #c0ecd4;
 
+    border: 2px solid #34cb79;
 }
 
 .items-grid li img,
