@@ -4,7 +4,7 @@
     <b>Ajude o meio ambiente, fazemos parte dele ♻️</b> 
 </h3>
 
-## :bookmark: Sobre o desenvolverdor
+## :bookmark: Sobre o desenvolvedor
 <h4 align="left">
     Feito por <a href="https://www.linkedin.com/in/juanpablodev/" target="_blank">Juan Pablo</a>
 </h4>
