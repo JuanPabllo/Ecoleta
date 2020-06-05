@@ -1,46 +1,53 @@
-// criar o servidor usando o node express
 const express = require("express")
 const server = express()
 
-//pegar o banco de dados
+// pegar o banco de dados
 const db = require("./database/db")
 
-//configurar pasta publica
+// configurar pasta publica
 server.use(express.static("public"))
 
-//habilitar o uso do req.body na aplicação
-server.use(express.urlencoded({ extended: true}))
+// habilitar o uso do req.body na nossa aplicação
+server.use(express.urlencoded({
+    extended: true
+}))
 
-//utilizando template engine
+
+// utilizando template engine
 const nunjucks = require("nunjucks")
 nunjucks.configure("src/views", {
     express: server,
     noCache: true
 })
 
-// configurar os caminhos da aplicação
+
+// configurar caminhos da minha aplicação
 // página inicial
 // req: Requisição
 // res: Resposta
 server.get("/", (req, res) => {
-    return res.render("index.html")
+    return res.render("index.html", {
+        title: "Um título"
+    })
 })
 
-//cadastrar pontos de coleta
-server.get("/create", (req, res) => {
 
-    //req.query: puxa as query strings da url
-    //console.log(req.query)
+
+server.get("/create-point", (req, res) => {
+
+    // req.query: Query Strings da nossa url
+    // console.log(req.query)
+
 
     return res.render("create-point.html")
 })
 
 server.post("/savepoint", (req, res) => {
 
-    //req.body: puxa o corpo do formulario
-    //console.log(req.body)
+    // req.body: O corpo do nosso formulário
+    // console.log(req.body)
 
-    //inserir dados no banco de dados
+    // inserir dados no banco de dados
     const query = `
         INSERT INTO places (
             image,
@@ -64,46 +71,51 @@ server.post("/savepoint", (req, res) => {
     ]
 
     function afterInsertData(err) {
-        if(err) {
+        if (err) {
             console.log(err)
-            return res.render("create-point.html", {failed: true})
+            return res.send("Erro no cadastro!")
         }
 
         console.log("Cadastrado com sucesso")
         console.log(this)
 
-        return res.render("create-point.html", {saved: true})
+        return res.render("create-point.html", {
+            saved: true
+        })
     }
 
     db.run(query, values, afterInsertData)
+
 })
 
-//pesquisar pontos de coleta
-server.get("/search", (req, res) => {
+
+
+server.get("/search-results", (req, res) => {
 
     const search = req.query.search
 
-    if(search == ""){
-        //pesquisa vazia
-        return res.render("search-results.html", {total: 0})
+    if (search == "") {
+        // pesquisa vazia
+        return res.render("search-results.html", {
+            total: 0
+        })
     }
 
-    //pegar os dados do banco de dados
-    db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function(err, rows) {
-        if(err) {
-            console.log(err)
-
+    // pegar os dados do banco de dados
+    db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function (err, rows) {
+        if (err) {
+            return console.log(err)
         }
-
-        //console.log("Aqui estão seus registros: ")
-        //console.log(rows)
 
         const total = rows.length
 
-        //mostrar a pagina html com os dados do banco de dados
-        return res.render("search-results.html", {places: rows, total: total})
+        // mostrar a página html com os dados do banco de dados
+        return res.render("search-results.html", {
+            places: rows,
+            total: total
+        })
     })
 })
 
 // ligar o servidor
-server.listen(3000)
+server.listen(5001)

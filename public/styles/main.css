@@ -1,22 +1,23 @@
-:root{
+/* :root -> raiz do documento */
+:root {
+    /*  declaração de variáveis */
     --title-color: #322153;
     --primary-color: #34cb79;
-    --background-color: #dadae4;
 }
 
 * {
     margin: 0;
     padding: 0;
-    
-    box-sizing: border-box;
+    box-shadow: border-box;
 }
 
 html {
     font-family: Roboto, sans-serif;
+
 }
 
 body {
-    background: var(--background-color);
+    background: #f0f0f5;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -24,7 +25,12 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: Ubuntu, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--title-color);
+    font-family: Ubuntu, sans-serif;
 }
