@@ -5,11 +5,11 @@
 </h3>
 
 ## :bookmark: Sobre o desenvolverdor
-<h4 align="center">
+<h4 align="left">
     Feito por <a href="https://www.linkedin.com/in/juanpablodev/" target="_blank">Juan Pablo</a>
 </h4>
 
-## :bookmark: Sobre
+## :bookmark: Sobre o projeto
 
 O <strong>Ecoleta</strong> é uma aplicação Web para ajudar pessoas a encontrarem pontos de coleta para reciclagem.
 
