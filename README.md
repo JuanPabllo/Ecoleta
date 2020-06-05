@@ -48,6 +48,6 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 <img width="950" src="public/assets/home.png" alt="page-home">
 <img width="950" src="public/assets/cadastro.png" alt="page-cadastro">
-<img width="950" src="public/assets/buscar.png" alt="page-buscar">
-<img width="950" src="public/assets/ok.png" alt="page-lista">
+<img width="950" src="public/assets/procura.png" alt="page-buscar">
+<img width="950" src="public/assets/ok.png" alt="page-lista">   
 <img width="950" src="public/assets/resultado.png" alt="page-lista">
