@@ -6,7 +6,7 @@
   "dependencies": {
     "express": "^4.17.3",
     "nunjucks": "^3.2.1",
-    "sqlite3": "^4.2.0"
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
